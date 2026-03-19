@@ -35,7 +35,7 @@ export default function Home() {
     try {
       setLoading(true);
       await API.post("/issues", { title, description });
-      router.push("/issues");
+      router.push("/");
     } finally {
       setLoading(false);
     }
@@ -49,7 +49,7 @@ export default function Home() {
           Create Issue
         </h1>
 
-        <Link href="/issues">
+        <Link href="/">
           <button className="text-sm text-blue-600 hover:underline">
             ← Back to Dashboard
           </button>
